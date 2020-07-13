@@ -73,7 +73,7 @@ def get_missed_tasks():
 
 def add_task():
     new_task = input('Enter task:\n')
-    new_deadline = input('Enter deadline: (YYYY-MM_DD)\n')
+    new_deadline = input('Enter deadline: (YYYY-MM-DD)\n')
     new_row = Table(task=new_task,
                     deadline=datetime.strptime(new_deadline, '%Y-%m-%d'))
     session.add(new_row)
